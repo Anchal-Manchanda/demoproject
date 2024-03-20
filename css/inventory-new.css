@@ -1,0 +1,132 @@
+.a-filter-dropdowns_left .cfl-dropdown.age-cfldropdown {
+	width: 12%;
+	position: relative;
+}
+
+.age-cfldropdown .a-optionbox.a-yearoptionbox {
+	width: 50%;
+	max-width: max-content;
+	padding: 0;
+	flex: 1;
+}
+
+.age-cfldropdown .a-optionbox.a-yearoptionbox {
+	background-color: transparent !important;
+	border-bottom: 1px solid #d5d8db;
+}
+
+.stockfilter .age-cfldropdown .a-optionbox input {
+	background-color: transparent !important;
+	padding-left: 0;
+	padding-right: 0;
+	height: 45px;
+	border: 0;
+	background: url(../images/angledown.svg) !important;
+	background-repeat: no-repeat !important;
+	background-position: right !important;
+	background-size: 12px !important;
+}
+
+.age-cfldropdown .a-optionbox.a-yearoptionbox .selectRegion {
+	background-color: transparent !important;
+}
+
+.age-cfldropdown .a-optionbox.a-yearoptionbox label {
+	padding-left: 0;
+}
+
+.date-wrap.age-wrap {
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+span.agetext {
+	border-radius: 4px;
+	border: 0;
+	height: 48px;
+	background-color: #e6e8eb;
+	background-image: url(../images/angledown.svg);
+	background-repeat: no-repeat;
+	background-position: 92%;
+	background-size: 12px;
+	outline: 0;
+	font-size: 14px;
+	padding: 13px 10px 4px;
+	width: 100%;
+	display: block;
+}
+
+.age-wrap input {
+	display: none;
+}
+
+.age-wrap .bootstrap-select button.btn.dropdown-toggle {
+	background: transparent;
+	border-bottom: 1px solid #d5d8db;
+	height: 45px;
+	padding: 0;
+}
+
+.age-wrap .bootstrap-select button.btn.dropdown-toggle:after {
+	position: relative;
+	top: 5px;
+}
+
+.age-wrap .bootstrap-select button.btn.dropdown-toggle:focus {
+	border: 0px !important;
+	border-bottom: 1px solid #0666eb !important;
+}
+
+.age-cfldropdown .age-wrap .a-optionbox.a-yearoptionbox {
+	width: 42% !important;
+	max-width: initial;
+	flex: 0 0 auto !important;
+}
+
+.age-cfldropdown .age-wrap .a-optionbox.a-yearoptionbox .dropdown.bootstrap-select {
+	width: 100%;
+}
+
+.age-cfldropdown .age-wrap .a-optionbox.a-yearoptionbox .dropdown.bootstrap-select .filter-option-inner-inner {
+	padding-top: 4px;
+}
+
+.header {
+	z-index: 1111;
+}
+
+@media (max-width:1024px) {
+	.cfl-dropdown.age-cfldropdown .period-dropdown.dropdown-menu .a-optionbox {
+		width: 100% !important;
+	}
+
+	.age-cfldropdown .date-wrap .date-seprator {
+		display: none;
+	}
+
+	.age-cfldropdown .drop-title {
+		margin-bottom: 0 !important;
+	}
+}
+
+@media (max-width:991px) {
+
+	.inventory_stock_filter .a-optionbox,
+	.a-filter-dropdowns_left .cfl-dropdown.age-cfldropdown {
+		width: 33.3% !important;
+		margin: 0px 0px 8px;
+	}
+
+}
+
+@media (max-width:575px) {
+	.age-cfldropdown .period-dropdown.dropdown-menu {
+		min-width: 220px;
+	}
+}
+
+@media (max-width:414px) {
+	.age-cfldropdown .period-dropdown.dropdown-menu {
+		min-width: 160px;
+	}
+}

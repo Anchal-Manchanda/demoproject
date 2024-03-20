@@ -1,0 +1,1586 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&display=swap');
+
+.dashboard-container {
+	width: 100%;
+	padding: 0 2rem;
+}
+
+.header .dropdown.dropstart:last-child a {
+	margin: 0;
+}
+
+aside.dashboard-sidebar {
+	background: #fff;
+	padding: 0px 2rem;
+}
+
+.dashboard-sidebar .side-menu-foo::before {
+	border-color: #F1F2F4;
+}
+
+.dashboard-pagecont {
+	width: calc(100% - 216px);
+	padding: 4rem 1rem 0 2rem !important;
+	margin-left: 216px;
+}
+
+.dashboard-pagecont .welcome_header h3,
+.dashboardtitle {
+	font-size: 24px;
+	font-weight: 500;
+	text-transform: capitalize;
+}
+
+.dashcards {
+	padding: 21px 15px;
+	height: 100%;
+}
+
+.white-card {
+	border-radius: 5.474px;
+}
+
+.dashcards_cont {
+	padding-left: 15px;
+}
+
+.dashcards_cont p {
+	margin: 0;
+	font-size: 13px;
+	word-break: break-word;
+}
+
+.dashcards_cont h5 {
+	font-size: 16px;
+	margin-bottom: 4px;
+	color: #030229;
+	opacity: 0.7;
+}
+
+.dashcards_img {
+	width: 46px;
+}
+
+h3.dashcardtitle {
+	font-weight: 400;
+	font-size: 20px;
+	text-transform: capitalize;
+	border-bottom: 1px solid #F1F2F4;
+	padding: 18px 15px;
+}
+
+.dashboardtitle {
+	font-weight: 500;
+	font-size: 24px;
+}
+
+.stock-table th,
+.stock-table td {
+	vertical-align: middle;
+	text-align: center;
+	color: #181A1C;
+	border: 1px solid rgba(3, 2, 41, 0.05) !important;
+}
+
+.stock-table td {
+	padding: 12px;
+}
+
+.bluetext {
+	color: #0666EB !important;
+}
+
+.weight600 {
+	font-weight: 600;
+}
+
+.stock-table tfoot {
+	background: #E6E8EB;
+}
+
+.stock-table tfoot tr td {
+	border-top: 0px !important;
+}
+
+.stock-table tr:last-child td {
+	border-bottom: 0 !important;
+}
+
+.stock-table th {
+	white-space: nowrap;
+}
+
+.buyingopp-sec.datatable_section table thead th {
+	padding: 6px 10px;
+	font-weight: 500;
+	font-size: 12px;
+	border: 1px solid rgba(3, 2, 41, 0.05) !important;
+	border-radius: 0;
+}
+
+.datatable_section table.dataTable>thead .sorting::before,
+.datatable_section table.dataTable>thead .sorting_asc::before,
+.datatable_section table.dataTable>thead .sorting:after,
+.datatable_section table.dataTable>thead .sorting_asc:after {
+	left: auto !important;
+	right: 26px !important;
+	color: #E5E5E5;
+	opacity: 1 !important;
+}
+
+.buyingopp-sec.datatable_section table thead th:first-child {
+	padding-left: 1rem !important;
+}
+
+.buyingopp-sec.datatable_section table thead th {
+	padding: 4px 20px !important;
+	min-width: 100px;
+	box-sizing: border-box;
+}
+
+table.dataTable>thead .sorting_asc:before,
+table.dataTable>thead .sorting_desc:after {
+	color: #808281 !important;
+}
+
+.datatable_section tr td span {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.buyingopp-sec.datatable_section.table-responsive table td {
+	padding: 12px 15px;
+	color: #181A1C;
+	border: 1px solid rgba(3, 2, 41, 0.05) !important;
+	border-top: 0 !important;
+}
+
+span.bluetext.carname {
+	font-weight: 600;
+	font-size: 16px;
+}
+
+td.tabledatacenter {
+	vertical-align: middle;
+}
+
+.actiondata svg {
+	margin: 0px 5px;
+	cursor: pointer;
+}
+
+.datatable_section tr td span:last-child {
+	margin-bottom: 0;
+}
+
+.datatable_section table.dataTable>thead .sorting::before,
+.datatable_section table.dataTable>thead .sorting_asc::before,
+.datatable_section table.dataTable>thead .sorting:after,
+.datatable_section table.dataTable>thead .sorting_asc:after {
+	transform: translateY(-56%);
+}
+
+.buyingopp-sec.datatable_section table {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	padding-bottom: 20px;
+}
+
+.actiondata svg:hover path {
+	fill: #0666EB !important;
+	fill-opacity: 1;
+}
+
+.datatable_section .dataTables_info {
+	padding-left: 1rem;
+	color: #181A1C;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+	float: left;
+	width: 50%;
+	padding-top: 0 !important;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.datatable_section .dataTables_paginate {
+	margin-right: 1rem !important;
+	color: #181A1C;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+	float: right;
+	border-radius: 2.224px;
+	border: 0.371px solid #E6E6ED;
+	padding: 4px 3px;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+	display: flex;
+	align-items: center;
+}
+
+.datatable_section .dataTables_paginate span {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.datatable_section .paginate_button.disabled {
+	color: #181A1C;
+	padding: 0px 10px;
+}
+
+.datatable_section a.paginate_button {
+	width: 23px;
+	height: 23px;
+	text-align: center;
+	border-radius: 2.224px;
+	border: 0.371px solid var(--Gray, #BCBCBC);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0px 4px;
+	font-size: 10px;
+}
+
+.datatable_section .paginate_button.previous,
+.datatable_section .paginate_button.next {
+	border: 0;
+	width: auto;
+	padding: 0;
+}
+
+.datatable_section a.paginate_button.current {
+	background: #0666EB;
+	color: #fff;
+	font-weight: 800;
+	border-color: transparent;
+}
+
+h3.dashcardtitle.innermaintitle {
+	font-size: 22px;
+	padding: 17px 20px;
+}
+
+.stock_cards_col {
+	margin-bottom: 20px;
+	width: auto;
+}
+
+.stock_cards_bg {
+	background: #E6E8EB;
+	text-align: center;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.stock_cards_bg h4 {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 0;
+	padding: 13px 25px;
+	width: 100%;
+	font-family: 'DM Sans', sans-serif;
+	height: calc(100% - 30px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.stock_cards_footer {
+	background: #8C8E90;
+	color: #fff;
+	font-size: 20px;
+	width: 100%;
+	height: 30px;
+	padding: 0px 10px;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.moretext {
+	display: none;
+}
+
+.morecardsshow {
+	display: flex;
+}
+
+a.showMore {
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 20px;
+	color: #0077C8;
+	text-decoration: none;
+}
+
+a.showMore::after {
+	content: '+ VIEW MORE';
+}
+
+.showLess::after {
+	content: '- VIEW LESS';
+}
+
+.hidden {
+	display: none;
+}
+
+.slide-toggle {
+	display: block;
+	max-height: 1000px;
+	transition: max-height 0.5s ease;
+}
+
+.showcard_row {
+	display: grid;
+	grid-template-columns: repeat(8, auto);
+	gap: 0px 30px;
+}
+
+.hidden {
+	display: none;
+}
+
+.slide-toggle {
+	display: block;
+	max-height: 1000px;
+	transition: max-height 0.5s ease;
+}
+
+.seemore_btn {
+	cursor: pointer;
+	color: #181818;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.stock_cards_col:hover .stock_cards_bg {
+	background: rgba(6, 102, 235, 0.10);
+}
+
+.stock_cards_col:hover .stock_cards_footer {
+	background: #0666EB;
+}
+
+.grey-card {
+	border-radius: 6px;
+	background: #8C8E90;
+	min-height: 58px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.caroptions_slider .slick-list {
+	padding: 0px !important;
+	margin: 0px -5px;
+}
+
+.caroptions_card.slick-slide {
+	padding: 0px 12px;
+	margin: 0;
+}
+
+.caroptions_card_bg {
+	border-radius: 6.898px;
+	background: #FFF;
+	box-shadow: 0px 0px 26.59761px 0px rgba(219, 219, 219, 0.40);
+}
+
+.caroptions_cont h5 {
+	font-size: 14.185px;
+	font-weight: 600;
+	line-height: normal;
+	letter-spacing: 0.299px;
+	text-transform: capitalize;
+}
+
+.caroptions_cont span {
+	color: #ADADAD;
+	font-size: 10.639px;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: 0.299px;
+	text-transform: capitalize;
+	text-align: left;
+	display: block;
+	padding-top: 8px;
+}
+
+.caroptions_footer {
+	text-align: left;
+	padding-top: 15px;
+}
+
+.caroptions_footer strong {
+	color: #000;
+	font-size: 14.185px;
+	font-weight: 600;
+	letter-spacing: 0.299px;
+}
+
+.caroptions_footer strong sub {
+	color: #ADADAD;
+	font-weight: 500;
+	margin-left: 5px;
+	bottom: 0;
+}
+
+.caroptions_footer span.bluetext {
+	font-size: 12.412px;
+	font-weight: 600;
+}
+
+.caroptions_slider button.slick-next.slick-arrow {
+	background-image: url(../images/bluearrow.svg);
+	background-repeat: no-repeat;
+	right: 15px;
+	left: auto;
+}
+
+.caroptions_slider button.slick-prev.slick-arrow {
+	background-image: url(../images/bluearrow.svg);
+	background-repeat: no-repeat;
+	right: 45px;
+	left: auto;
+	rotate: 180deg;
+}
+
+.caroptions_slider button.slick-arrow {
+	top: -40px !important;
+	width: 26px !important;
+	height: 26px !important;
+	background-size: 7px !important;
+	background-color: transparent;
+	border-radius: 30px;
+	background-position: 56% !important;
+	background-size: contain;
+	border: 1px solid #1E7EF7;
+	opacity: 0.2;
+}
+
+.caroptions_slider button.slick-arrow:hover {
+	opacity: 1;
+}
+
+.available_offers {
+	padding: 17px 20px;
+}
+
+.available_offers h4 {
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 1.5px;
+}
+
+.available_offers p {
+	font-size: 13px;
+	line-height: 16px;
+	letter-spacing: 1.5px;
+	color: #181A1C;
+}
+
+.available_offers .a-optionbox input {
+	background-color: #EFF2F5;
+}
+
+.sellingtop_widgetrow.caroptions_slider {
+	margin: 0 -15px 0 -5px;
+}
+
+.inventorydetail_cards {
+	border-radius: 6px;
+}
+
+.carinfosec h5 {
+	font-size: 16px;
+	font-weight: normal;
+	word-break: break-word;
+}
+
+.carinfosec h3 {
+	font-size: 26px;
+	font-weight: normal;
+	color: #0666EB;
+	font-weight: 600;
+}
+
+.carmileagesec ul li {
+	display: inline;
+}
+
+.carmileagesec ul li span.carmileage_avg {
+	display: block;
+	line-height: 20px;
+	margin-top: 5px;
+}
+
+.carmileagesec ul {
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.carmileagesec ul li {
+	display: inline;
+	text-align: center;
+	padding: 0px 20px;
+	margin-bottom: 10px;
+}
+
+span.carmileage_icon {
+	background: #E6E8EB;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	padding: 6px;
+	border-radius: 8px;
+}
+
+.carmileage_avg {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+span.carmileage_text {
+	font-weight: 500;
+	color: #181A1C;
+	font-size: 12px;
+}
+
+.carmileage_progressbar .circle-progress-wrap {
+	width: 74px;
+}
+
+.carmileage_progressbar .circle-progress strong,
+.carmileage_progressbar .semicircle-progress strong {
+	color: #0666EB;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.carinfosec.carmileage_progressbar {
+	width: 50%;
+}
+
+.carinfosec.carmileage_progressbar h4 {
+	font-size: 14px;
+	font-weight: 500;
+	margin-top: 7px;
+}
+
+.carmileage_progressbar .semicircle-progress-wrap {
+	width: 100px;
+	height: 64px;
+}
+
+.carmileage_progressbar .semicircle-progress strong {
+	top: 25px;
+}
+
+.carmileage_progressbar .semicircle-progress-percent span {
+	color: #8A8B8C;
+	font-size: 10px;
+}
+
+.carmileage_progressbar .semicircle-progress-percent {
+	margin-top: -10px;
+}
+
+.vectorline {
+	position: relative;
+}
+
+.inventorydetail_info h3 {
+	font-size: 22px;
+	font-weight: 400;
+}
+
+.inventorydetail_info_icon {
+	border-radius: 30px;
+	background: #FFF;
+	-webkit-box-shadow: 0px 2px 4px 0px rgba(147, 144, 144, 0.20);
+	box-shadow: 0px 2px 4px 0px rgba(147, 144, 144, 0.20);
+	width: 44px;
+	height: 44px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+
+.inventorydetail_info_content {
+	width: calc(100% - 60px);
+}
+
+.inventorydetail_info_content span {
+	color: #181A1C;
+	font-weight: 500;
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
+.inventorydetail_info_content .forminput input {
+	height: 30px;
+	padding: 0 12px !important;
+	max-width: 136px;
+	font-size: 12px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+
+.inventorydetail_info_widget.highlightedbox {
+	border-radius: 6px;
+	background: #0666EB;
+	box-shadow: 0px 0px 20px 0px rgba(6, 102, 235, 0.20);
+	padding: 20px;
+}
+
+.highlightedbox .inventorydetail_info_content span {
+	color: #fff;
+}
+
+.highlightedbox input.form-control {
+	background: transparent;
+	margin-bottom: 0;
+	padding: 0 !important;
+	border: 0;
+}
+
+.highlightedbox .form-floating.forminput {
+	border-radius: 2px;
+	background: #A3E0AA;
+	max-width: 136px;
+	display: flex;
+	padding: 0px 12px !important;
+}
+
+.showcontainer {
+	display: block;
+}
+
+.seemore_btn::after {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none'%3E%3Cpath d='M14.3 1.2002L7.99999 7.50019L1.69999 1.20019' stroke='%236A6C6F' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right;
+	display: inline-block;
+	background-size: 14px;
+	content: "";
+	width: 14px;
+	height: 12px;
+	position: relative;
+	left: 6px;
+}
+
+.seemore_btn:hover {
+	color: #0666EB !important;
+}
+
+.seemore_btn:hover:after {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='9' viewBox='0 0 16 9' fill='none'%3E%3Cpath d='M14.3 1.2002L7.99999 7.50019L1.69999 1.20019' stroke='%230666EB' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.seemore_btn.rotatebtn_icon:after {
+	transform: rotate(180deg);
+}
+
+.seemore_btndiv {
+	text-align: center;
+}
+
+.custom-select {
+	position: relative;
+	background-color: #e6e8eb;
+	padding: 10px;
+	cursor: pointer;
+	width: 100%;
+	height: 48px;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+}
+
+/* Style the value inside the custom select box */
+.custom-select .selected-value {
+	display: block;
+}
+
+/* Hide the input box initially */
+.inputbox_div {
+	display: none;
+}
+
+label.floatinglabel.active {
+	color: #0666eb;
+	-webkit-transform: translate(0, -10px);
+	-ms-transform: translate(0, -10px);
+	transform: translate(0, -10px);
+	font-size: 10px;
+	letter-spacing: 1px;
+	position: absolute;
+}
+
+label.floatinglabel.active {
+	color: #0666eb;
+	-webkit-transform: translate(0, -10px);
+	-ms-transform: translate(0, -10px);
+	transform: translate(0, -10px);
+	font-size: 10px;
+	letter-spacing: 1px;
+	position: absolute;
+}
+
+.a-filter-dropdowns .searchbtn a {
+	float: right;
+	padding: 20px 30px;
+	display: flex;
+	align-items: center;
+	border-radius: 40px;
+	margin: 0;
+}
+
+.datatable_section table {
+	width: 100%;
+}
+
+#stocktable_info,
+#stocktable_paginate {
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	padding: 0px 20px !important;
+	width: 50%;
+	border: 0;
+	margin: 0 !important;
+
+}
+
+.datatablefooterwrap {
+	width: 100%;
+	position: sticky;
+	bottom: 0;
+	background: #fff;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	border-top: 0;
+	flex-wrap: wrap;
+	padding: 0px 0px 10px;
+}
+
+#stocktable_paginate {
+	justify-content: flex-end;
+}
+
+.dataTables_info,
+.dataTables_paginate {
+	overflow-x: hidden;
+}
+
+.dashboard-pagecont .welcome_header h3,
+.dashboardtitle {
+	width: 100%;
+}
+
+.stockfilter .a-optionbox input {
+	background-position: 90%;
+}
+
+.stockfilter .a-optionbox.a-yearoptionbox input {
+	background-position: 82%;
+}
+
+.stockfilter .a-optionbox input {
+	padding-top: 13px;
+}
+
+.buyingopp-sec.datatable_section table thead th.datatable_widget2 {
+	min-width: 80px;
+}
+
+.table-scroll .datatable_section .dataTables_wrapper {
+	overflow: hidden;
+}
+
+.table-scroll .datatable_section .dataTables_wrapper .stocktablewrap {
+	overflow: auto;
+}
+
+@media (max-width:1500px) {
+	.dashcards {
+		padding: 12px 12px;
+	}
+
+	.grey-card {
+		font-size: 17px;
+	}
+}
+
+@media (max-width:1440px) {
+
+	.stock_cards_bg h4,
+	.stock_cards_footer {
+		font-size: 18px;
+	}
+
+	.showcard_row {
+		gap: 0px 20px;
+	}
+
+	.seemore_btn {
+		font-size: 17px;
+	}
+
+	h3.dashcardtitle.innermaintitle {
+		font-size: 20px;
+	}
+
+	.inventorydetail_info h3 {
+		font-size: 20px;
+	}
+
+	.inventorydetail_info_widget.highlightedbox {
+		padding: 15px;
+	}
+
+	.dashcards_cont h5 {
+		font-size: 15px;
+	}
+
+	h3.dashcardtitle {
+		font-size: 18px;
+	}
+}
+
+@media (max-width:1366px) {
+	.grey-card {
+		font-size: 16px;
+	}
+
+	.datatable_section table.dataTable>thead .sorting::before,
+	.datatable_section table.dataTable>thead .sorting_asc::before,
+	.datatable_section table.dataTable>thead .sorting:after,
+	.datatable_section table.dataTable>thead .sorting_asc:after {
+		right: 16px !important;
+	}
+
+	.datatable_section tr td span {
+		font-size: 13px;
+	}
+
+	span.bluetext.carname {
+		font-size: 15px;
+	}
+
+	.stock_cards_bg h4 {
+		font-size: 18px;
+		padding: 13px 20px;
+	}
+
+	.grey-card {
+		font-size: 17px;
+	}
+
+	.cardcol {
+		padding: 0 5px;
+	}
+
+	.cardrow {
+		margin: 0 -5px;
+	}
+
+	.dashcards {
+		padding: 12px 8px;
+	}
+
+	.dashcards_cont {
+		padding-left: 8px;
+	}
+
+	.dashcards_cont p {
+		font-size: 12px;
+	}
+
+	.dashcards_img {
+		width: 40px;
+	}
+
+	.dashcards_img svg {
+		width: 100%;
+	}
+
+	.dashboard-pagecont .welcome_header h3,
+	.dashboardtitle {
+		font-size: 22px;
+	}
+
+	.stockfilter .a-optionbox label,
+	.stockfilter .a-optionbox input {
+		font-size: 13px;
+	}
+
+	.stock-table th,
+	.stock-table td {
+		font-size: 13px;
+	}
+
+	.inventorydetail_info_content span {
+		font-size: 13px;
+	}
+
+	.inventorydetail_info_icon {
+		width: 34px;
+		height: 34px;
+		margin-right: 8px;
+	}
+
+	.inventorydetail_info_content {
+		width: calc(100% - 42px);
+	}
+}
+
+@media (max-width:1280px) {
+	.datatablefooterwrap {
+		padding-top: 10px;
+	}
+
+	.grey-card {
+		font-size: 16px;
+	}
+
+	.stock_cards_footer {
+		font-size: 16px;
+	}
+
+	.seemore_btn {
+		font-size: 16px;
+	}
+
+	h3.dashcardtitle.innermaintitle {
+		font-size: 18px;
+	}
+
+	.inventorydetail_info_widget.highlightedbox {
+		padding: 10px;
+	}
+
+	.inventorydetail_info h3 {
+		font-size: 18px;
+		margin-bottom: 15px !important;
+	}
+
+	h3.dashcardtitle {
+		font-size: 17px;
+	}
+
+	.showcard_row {
+		gap: 0px 20px;
+	}
+
+	.carmileagesec ul {
+		justify-content: center;
+	}
+
+	.carinfosec h3 {
+		font-size: 24px;
+	}
+
+	.carmileagesec ul li {
+		padding: 0px 15px;
+	}
+
+	.carmileage_avg {
+		font-size: 15px;
+	}
+
+	.carinfosec.carmileage_progressbar h4 {
+		font-size: 12px;
+	}
+
+	.inventorydetail_info h3 {
+		font-size: 20px;
+	}
+
+	.highlightedbox .form-floating.forminput,
+	.inventorydetail_info_content .forminput input {
+		padding: 0px 8px !important;
+	}
+
+	.caroptions_card.slick-slide {
+		padding: 0px 7px;
+	}
+
+	.buyingopp-sec.datatable_section table thead th.datatable_widget1 {
+		min-width: 140px;
+	}
+
+	.datatable_section td {
+		font-size: 13px;
+	}
+
+	.buyingopp-sec.datatable_section table thead th {
+		min-width: 120px;
+	}
+
+	.dashcards_cont h5 {
+		font-size: 15px;
+	}
+
+	.dashcards_cont {
+		padding-left: 10px;
+	}
+
+	.datatable_section {
+		width: 100%;
+	}
+
+	.innercontent .a-optionbox {
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width:1199px) {
+	.dashboard-pagecont {
+		margin-left: 190px;
+		width: calc(100% - 190px);
+	}
+
+	.available_offers .a-optionbox label {
+		font-size: 13px;
+	}
+
+	.stockfilter .a-optionbox input {
+		background-position: 87%;
+	}
+
+	.buyingopp-sec.datatable_section table thead th,
+	.buyingopp-sec.datatable_section.table-responsive table td {
+		font-size: 11px;
+	}
+
+	.buyingopp-sec table.dataTable>thead .sorting:before,
+	.datatable_section table.dataTable>thead .sorting:after {
+		right: 8px !important;
+	}
+
+	.buyingopp-sec.datatable_section table thead th,
+	.buyingopp-sec.datatable_section.table-responsive table td {
+		min-width: 70px;
+		padding: 6px 10px !important;
+	}
+
+	.buyingopp-sec.datatable_section.table-responsive table td:first-child {
+		padding: 6px 15px !important;
+	}
+
+	span.bluetext.carname {
+		font-size: 14px;
+	}
+
+	.datatable_section tr td span,
+	.datatable_section td {
+		font-size: 12px;
+		margin-bottom: 0;
+	}
+
+	.stockfilter .a-optionbox label,
+	.stockfilter .a-optionbox input {
+		font-size: 12px;
+	}
+
+	aside.dashboard-sidebar {
+		background: #fff;
+		padding: 0px 1.4rem;
+	}
+
+	.datatable_section .dataTables_info {
+		margin-top: 25px !important;
+	}
+
+	.carmileage_progressbar .circle-progress .content-wrap {
+		top: 50%;
+		left: 0;
+	}
+
+	.carmileagesec ul li {
+		padding: 0px 7px;
+	}
+
+	.carinfosec.carmileage_progressbar {
+		width: auto;
+	}
+
+	.carinfosec.vectorline {
+		padding-right: 10px;
+	}
+
+	.carinfosec h5 {
+		font-size: 15px;
+	}
+
+	.carinfosec h3 {
+		font-size: 22px;
+	}
+
+	.grey-card {
+		font-size: 16px;
+	}
+
+	.showcard_row {
+		gap: 0px 10px;
+	}
+
+	.stock_cards_bg h4 {
+		padding: 13px 13px;
+		font-size: 16px;
+	}
+
+	.dashboard-pagecont .welcome_header h3,
+	.dashboardtitle {
+		font-size: 21px;
+	}
+
+	.dashboard-pagecont .dashcards_cont {
+		padding-left: 0;
+		width: 100%;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.dashcards {
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap
+	}
+
+	.col.cardcol {
+		padding: 0 5px;
+	}
+
+	.row.cardrow {
+		margin: 0 -5px;
+	}
+
+	h3.dashcardtitle {
+		font-size: 16px;
+	}
+
+	.stock-table th,
+	.stock-table td {
+		font-size: 12px;
+	}
+
+	.chartsection {
+		min-height: 350px !important;
+	}
+
+	.sellingtop_widgetrow.caroptions_slider {
+		margin: 0;
+	}
+}
+
+@media (max-width:1024px) {
+	.showcard_row {
+		grid-template-columns: repeat(4, auto);
+	}
+}
+
+@media (min-width:992px) {
+	.vectorline:after {
+		content: "";
+		background-image: url(../images/graphicvector-line.png);
+		position: absolute;
+		height: 100%;
+		width: 2px;
+		right: 0;
+		top: 0;
+		background-size: contain;
+	}
+}
+
+@media (max-width:991px) {
+	.datatablefooterwrap {
+		position: static;
+	}
+
+	.available_offers .a-optionbox label {
+		font-size: 12px;
+	}
+
+	.available_offers h4,
+	.available_offers p {
+		font-size: 12px;
+	}
+
+	.stock_cards_footer {
+		font-size: 15px;
+	}
+
+	.stock_cards_bg h4 {
+		font-size: 15px;
+	}
+
+	.seemore_btn {
+		font-size: 15px;
+	}
+
+	.stockfilter .a-optionbox input {
+		background-position: 86% !important;
+	}
+
+	h3.dashcardtitle {
+		padding: 15px 15px !important;
+	}
+
+	span.bluetext.carname {
+		font-size: 13px;
+	}
+
+	.datatable_section tr td span,
+	.datatable_section td {
+		font-size: 11px;
+	}
+
+	.caroptions_card.slick-slide img {
+		max-width: 210px;
+		margin: auto;
+		width: 100%;
+	}
+
+	.stockfilter .a-optionbox label,
+	.stockfilter .a-optionbox input {
+		font-size: 11px;
+	}
+
+	aside.dashboard-sidebar {
+		position: fixed;
+		top: 50px;
+		width: 190px !important;
+	}
+
+	.col.cardcol {
+		padding: 0 3px;
+		flex: 0 0 33.3%;
+		margin-bottom: 8px;
+	}
+
+	.dashboard-pagecont .dashcards_cont {
+		width: auto;
+		text-align: left;
+		margin-top: 5px;
+	}
+
+	.dashcards_img {
+		margin-right: 5px;
+		width: 35px;
+	}
+
+	.dashcards_cont p {
+		font-size: 11px;
+	}
+
+	.row.cardrow {
+		margin: 0 -6px;
+	}
+
+	.dashcards_cont h5 {
+		font-size: 14px;
+	}
+
+	h3.dashcardtitle.innermaintitle {
+		font-size: 16px;
+	}
+
+	.carbasicinfo {
+		text-align: center;
+	}
+
+	.a-filter-dropdowns_right.searchbtn {
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.a-filter-dropdowns .searchbtn a {
+		float: none;
+		display: inline-block;
+		padding: 10px 30px;
+		height: auto;
+	}
+
+	.showcard_row {
+		gap: 0px 10px;
+		grid-template-columns: repeat(4, auto);
+	}
+
+	.datatable_section .dataTables_info {
+		text-align: left !important;
+		font-size: 13px;
+	}
+
+	.inventorydetail_cards {
+		padding: 15px 15px !important;
+	}
+
+	.carinfosec h3 {
+		font-size: 20px;
+	}
+
+	.grey-card {
+		font-size: 14px;
+	}
+
+	.dashboard-pagecont .welcome_header h3,
+	.dashboardtitle {
+		font-size: 20px;
+	}
+
+	.stockfilter .a-optionbox {
+		width: 20% !important;
+	}
+
+	.dashboard-pagecont {
+		padding-left: 2rem !important;
+		padding-right: 1rem !important;
+	}
+
+	.stock-table th,
+	.stock-table td {
+		font-size: 11px;
+	}
+
+	.showcard_row {
+		gap: 0px 10px;
+	}
+
+	.inventorydetail_info h3 {
+		font-size: 18px;
+	}
+}
+
+@media (max-width:767px) {
+	.available_offers .a-optionbox label {
+		font-size: 11px;
+	}
+
+	.grey-card {
+		font-size: 13px;
+	}
+
+	.stock_cards_footer {
+		font-size: 14px;
+	}
+
+	.stock_cards_bg h4 {
+		font-size: 14px;
+	}
+
+	.seemore_btn {
+		font-size: 14px;
+	}
+
+	.buyingopp-sec.datatable_section.table-responsive table th,
+	.buyingopp-sec.datatable_section.table-responsive table td {
+		font-size: 11px;
+	}
+
+	span.bluetext.carname {
+		font-size: 12px;
+	}
+
+	.dashboard-container {
+		padding: 0 1rem;
+	}
+
+	.stockfilter .a-filter-dropdowns_left {
+		margin: 0;
+	}
+
+	.stockfilter {
+		padding: 1rem 10px !important;
+	}
+
+	.dashcards {
+		padding: 8px 8px;
+	}
+
+	h3.dashcardtitle.innermaintitle {
+		font-size: 15px;
+	}
+
+	.a-filter-dropdowns .searchbtn a {
+		float: none;
+		display: inline-block;
+		padding: 12px 30px;
+		height: auto;
+	}
+
+	aside.app-sidebar.dashboard-sidebar {
+		display: none;
+	}
+
+	.side-toggle {
+		box-shadow: none !important;
+	}
+
+	a.logo {
+		margin-top: 2px;
+	}
+
+	.inventorydetail_info_icon {
+		width: 34px;
+		height: 34px;
+	}
+
+	.inventorydetail_info_widget.highlightedbox {
+		padding: 10px;
+	}
+
+	.mobhalfdiv {
+		width: 50%;
+	}
+
+	.available_offers form.inventoryform .form-group {
+		margin-bottom: 0 !important;
+	}
+
+	.available_offers form.inventoryform .row {
+		margin: 0;
+	}
+
+	.dashboard-pagecont .welcome_header h3,
+	.dashboardtitle {
+		font-size: 20px;
+		padding-right: 20px;
+	}
+
+	.chartsection {
+		min-height: 350px !important;
+	}
+
+	.dashboard-pagecont {
+		width: 100%;
+		padding: 2rem 1rem !important;
+		margin-left: 0px;
+	}
+
+	aside.dashboard-sidebar {
+		margin-left: 0;
+	}
+
+	.page-main .app-sidebar {
+		padding: 10px !important;
+	}
+
+	.caroptions_slider button.slick-arrow {
+		top: auto !important;
+		bottom: -50px !important;
+		position: absolute;
+	}
+
+	.caroptions_slider button.slick-next.slick-arrow {
+		right: 50%;
+		transform: translate(30px, 0px);
+	}
+
+	.caroptions_slider button.slick-prev.slick-arrow {
+		left: 50%;
+		transform: translate(30px, 0px);
+	}
+}
+
+@media (max-width:575px) {
+	.showcard_row {
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.dashboard-pagecont .dashcards_cont {
+		width: 100%;
+		text-align: center;
+	}
+
+	.dashcards_img {
+		margin-right: 0;
+	}
+}
+
+@media (max-width:480px) {
+
+	.dashboard-pagecont .welcome_header h3,
+	.dashboardtitle {
+		font-size: 18px;
+	}
+
+	.stockfilter .a-optionbox {
+		width: 50% !important;
+		margin-bottom: 8px;
+	}
+
+	.mobhalfdiv {
+		width: 100%;
+	}
+
+	.inventorydetail_info_content .forminput input {
+		max-width: 100%;
+	}
+
+	div.dataTables_wrapper div.dataTables_paginate {
+		float: none;
+		margin: 10px 16px !important;
+		justify-content: center;
+	}
+
+	#stocktable_info,
+	#stocktable_paginate {
+		margin: 6px 0 !important;
+		width: 100%;
+		text-align: center !important;
+		justify-content: center;
+	}
+
+	.caroptions_card.slick-slide img {
+		max-width: 210px;
+		margin: auto;
+	}
+
+	.caroptions_cont h5 {
+		justify-content: center;
+	}
+
+	.caroptions_cont span,
+	.caroptions_footer {
+		text-align: center;
+	}
+
+	.grey-card {
+		font-size: 12px;
+		line-height: 21px;
+	}
+}
+
+@media (max-width:416px) {
+	.col.cardcol {
+		flex: 0 0 50%;
+	}
+}
