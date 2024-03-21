@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/bootstrap-select.min.css">
+      <link href="css/fontawesome.min.css" rel="stylesheet">
+      <link href="css/custom-css.css" rel="stylesheet">
+      <link href="css/reports-css.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+      <link href="css/stylenew.css" rel="stylesheet">
+      <link href="css/inventory-new.css" rel="stylesheet">
+      <title>Inventory</title>
+   </head>
+   <body>
+      <div class="mainwrapper">
+         <header class="header d-flex align-items-center">
+            <div class="dashboard-container container">
+               <div class="row justify-content-between">
+                  <div class="col-auto p-0 d-flex flex-wrap">
+                     <a class="btn side-toggle d-flex d-md-none p-0 me-2" data-bs-toggle="offcanvas"
+                        href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                           class="bi bi-list" viewBox="0 0 16 16">
+                           <path fill-rule="evenodd"
+                              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                     </a>
+                     <a href="#" class="logo">
+                        <svg width="83" height="16" viewBox="0 0 83 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g clip-path="url(#clip0_23_655)">
+                              <path d="M18.0085 15.9382C14.6469 15.9382 12.1499 13.5466 12.1499 9.8577C12.1499 6.16878 14.5322 3.80366 18.0085 3.80366C18.7738 3.76915 19.5378 3.89553 20.2513 4.17465C20.9647 4.45377 21.6117 4.87943 22.1504 5.42414C22.6892 5.96885 23.1078 6.62052 23.3792 7.33706C23.6506 8.0536 23.7687 8.81908 23.726 9.58412C23.7273 9.98293 23.6978 10.3813 23.6377 10.7755H14.6645C14.6793 11.1998 14.7776 11.617 14.9537 12.0032C15.1298 12.3894 15.3803 12.7372 15.6909 13.0265C16.0015 13.3158 16.366 13.5411 16.7637 13.6894C17.1614 13.8377 17.5844 13.9061 18.0085 13.8908C18.5823 13.931 19.1548 13.7954 19.6497 13.5022C20.1446 13.209 20.5385 12.772 20.779 12.2493H23.426C23.0575 13.3766 22.3261 14.35 21.3459 15.0174C20.3658 15.6848 19.1921 16.0087 18.0085 15.9382ZM14.6822 8.87812H21.1849C21.1754 8.46415 21.0815 8.05647 20.9091 7.68001C20.7366 7.30356 20.4893 6.96624 20.1821 6.68869C19.8748 6.41114 19.5142 6.19917 19.1223 6.06577C18.7304 5.93238 18.3153 5.88036 17.9026 5.91288C17.0899 5.90615 16.305 6.20875 15.707 6.75936C15.109 7.30997 14.7426 8.06739 14.6822 8.87812Z" fill="#181A1C"/>
+                              <path d="M30.8364 3.83889C31.6169 3.81438 32.3922 3.97327 33.1001 4.30279C33.808 4.63232 34.4289 5.12329 34.9127 5.73629V4.03304H37.3656V15.7793H34.9127V14.0143C34.4256 14.6355 33.8003 15.1345 33.0865 15.4715C32.3728 15.8086 31.5902 15.9744 30.8011 15.9558C27.7483 15.9558 25.2954 13.4583 25.2954 9.83114C25.2954 6.20401 27.7836 3.83889 30.8364 3.83889ZM31.3481 5.94808C30.855 5.95603 30.3688 6.06526 29.9196 6.26895C29.4705 6.47265 29.0679 6.76649 28.737 7.13224C28.4061 7.49799 28.1538 7.92784 27.9959 8.39514C27.838 8.86245 27.7777 9.35725 27.8188 9.84881C27.8188 12.3905 29.5835 13.8554 31.3481 13.8554C33.1128 13.8554 34.8774 12.4346 34.8774 9.89293C34.9185 9.39629 34.8574 8.89651 34.6978 8.42445C34.5381 7.95238 34.2834 7.51806 33.9493 7.14834C33.6152 6.77863 33.2089 6.48138 32.7555 6.27493C32.302 6.06849 31.811 5.95724 31.3128 5.94808H31.3481Z" fill="#181A1C"/>
+                              <path d="M40.5604 0H42.9868V15.7794H40.5604V0Z" fill="#181A1C"/>
+                              <path d="M59.3448 9.849C58.6997 9.86894 58.0576 9.75357 57.4598 9.51033C56.862 9.26708 56.3217 8.90134 55.8737 8.43665C55.4257 7.97196 55.08 7.4186 54.8588 6.8122C54.6375 6.2058 54.5456 5.5598 54.5891 4.91574C54.5891 1.92402 56.5214 0.000126134 59.3448 0.000126134C59.9677 -0.0336572 60.5906 0.0650592 61.1725 0.289782C61.7545 0.514505 62.2822 0.860122 62.7207 1.30381C63.1593 1.74749 63.4989 2.27917 63.7169 2.86375C63.935 3.44832 64.0266 4.07251 63.9858 4.69511C63.9883 5.02007 63.9647 5.34469 63.9152 5.66586H56.6272C56.6593 6.35878 56.962 7.01143 57.4702 7.48343C57.9784 7.95544 58.6515 8.20911 59.3448 8.18987C59.8105 8.22088 60.2746 8.11016 60.6762 7.87231C61.0778 7.63445 61.398 7.28059 61.5947 6.85726H63.7211C63.4218 7.76774 62.831 8.55423 62.0399 9.09503C61.2488 9.63583 60.3016 9.90082 59.3448 9.849ZM56.6449 4.06851H61.9388C61.9301 3.73459 61.8538 3.40589 61.7146 3.10229C61.5753 2.79868 61.376 2.5265 61.1285 2.30213C60.8811 2.07776 60.5908 1.90589 60.2751 1.79691C59.9595 1.68793 59.6249 1.64409 59.2918 1.66807C58.6271 1.65264 57.9819 1.89311 57.4893 2.33981C56.9967 2.78651 56.6945 3.40532 56.6449 4.06851Z" fill="#181A1C"/>
+                              <path d="M66.9071 0.158936L69.607 7.93389L72.3069 0.158936H74.398L70.7628 9.69892H68.4158L64.8424 0.158936H66.9071Z" fill="#181A1C"/>
+                              <path d="M79.3465 9.84887C77.0613 9.84887 75.4554 8.49861 75.3672 6.76888H77.4053C77.489 7.20061 77.7307 7.58559 78.0832 7.8484C78.4357 8.11121 78.8737 8.23294 79.3112 8.18974C80.4582 8.18974 81.0758 7.70435 81.0758 7.05129C81.0758 5.18036 75.5437 6.2482 75.5437 2.75344C75.5437 1.23552 76.9642 0 79.2053 0C81.4464 0 82.7875 1.16493 82.8934 3.07116H80.9258C80.9039 2.86237 80.8407 2.66002 80.7397 2.47596C80.6388 2.2919 80.5022 2.1298 80.3379 1.99915C80.1736 1.86851 79.9849 1.77194 79.7829 1.71507C79.5808 1.6582 79.3695 1.64217 79.1612 1.66794C78.1024 1.66794 77.5465 2.10039 77.5465 2.7358C77.5465 4.65969 82.9287 3.61831 83.0346 7.03365C82.9993 8.63982 81.6052 9.84887 79.3465 9.84887Z" fill="#181A1C"/>
+                              <path d="M4.21747 3.92725H0V5.96585H4.12926C6.67917 5.96585 8.10854 7.47494 8.10854 9.98129C8.10854 12.4876 6.67917 13.9438 4.12926 13.9438H0V16H4.21747C8.08204 16 10.5879 13.6349 10.5879 9.98129C10.5879 6.32767 8.08204 3.92725 4.21747 3.92725Z" fill="#181A1C"/>
+                              <path d="M50.9896 5.83341C51.6329 5.69756 52.2084 5.34077 52.6161 4.82493C53.0238 4.30909 53.2382 3.66677 53.2219 3.00938C53.2219 1.3679 52.0485 0 49.6927 0H46.0133V1.63266H49.6221C50.7161 1.63266 51.2102 2.1798 51.2102 3.05349C51.2102 3.92718 50.7161 4.51847 49.6221 4.51847H46.0133V9.81356H47.9809V5.99228H48.8633L51.025 9.81356H53.3719L50.9896 5.83341Z" fill="#181A1C"/>
+                           </g>
+                           <defs>
+                              <clipPath id="clip0_23_655">
+                                 <rect width="83" height="16" fill="white"/>
+                              </clipPath>
+                           </defs>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="col-auto d-flex align-items-center">
+                     <div class="dropdown dropdown_notification">
+                        <a href="#" class="icon me-2 dropdown-toggle no-arrow" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.8916 13.9368L11.3444 16.3228L15.213 12.104" stroke="#181A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9725 7.8411C21.3069 11.5755 21.3036 15.4233 20.9584 19.1941C20.8379 20.5099 19.7754 21.5359 18.4541 21.6062C14.706 21.8054 9.36075 21.7934 5.53882 21.5982C4.22721 21.5313 3.15836 20.5243 3.02434 19.2129C2.63822 15.4347 2.63617 11.5941 3.01207 7.81187C3.15094 6.41457 4.33942 5.39307 5.71392 5.39307L6.74715 5.39307V3.50049C6.74715 3.08627 7.08294 2.75049 7.49715 2.75049C7.91136 2.75049 8.24715 3.08627 8.24715 3.50049V5.39307L15.7474 5.39307V3.50049C15.7474 3.08628 16.0832 2.75049 16.4974 2.75049C16.9117 2.75049 17.2474 3.08628 17.2474 3.50049V5.39307H18.2663C19.6529 5.39307 20.8464 6.43187 20.9725 7.8411ZM15.7474 6.89307V8.00049C15.7474 8.4147 16.0832 8.75049 16.4974 8.75049C16.9117 8.75049 17.2474 8.4147 17.2474 8.00049V6.89307H18.2663C18.9048 6.89307 19.4241 7.36712 19.4785 7.97487C19.8048 11.619 19.8016 15.3763 19.4646 19.0573C19.4119 19.633 18.9499 20.0777 18.3745 20.1083C14.6825 20.3045 9.3896 20.2929 5.61532 20.1002C5.0381 20.0707 4.57484 19.6306 4.51657 19.0604C4.14076 15.3831 4.13867 11.6433 4.50471 7.96022C4.56442 7.35948 5.08054 6.89307 5.71392 6.89307H6.74715L6.74715 8.00049C6.74715 8.4147 7.08293 8.75049 7.49715 8.75049C7.91136 8.75049 8.24715 8.4147 8.24715 8.00049L8.24715 6.89307H15.7474Z" fill="#181A1C"/>
+                           </svg>
+                           <span class="counter"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                           <h6 class="dropdown-heading">Tasks for today</h6>
+                           <div class="dropdown-conetnt">
+                              <div class="task_notification">
+                                 <div class="card mb-4">
+                                    <div class="custom-control custom-radio">
+                                       <input type="checkbox" id="TaskRadio1" name="TaskRadio1" class="custom-control-input">
+                                       <label class="custom-control-label" for="TaskRadio1"></label>
+                                    </div>
+                                    <div class="card-body">
+                                       <div>
+                                          <h4 class="title mb-2">keep the inventory up to date</h4>
+                                          <p class="mb-1">Sold a car? Remove it from the inventory. Got a new one? Add it now.</p>
+                                       </div>
+                                       <div class="action">
+                                          <a href="#">
+                                             Update inventory
+                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="#0666EB" d="M6.12402 3.625L10.4995 8.00049L6.12402 12.376" stroke="#181A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card mb-4">
+                                    <div class="custom-control custom-radio">
+                                       <input type="checkbox" id="TaskRadio2" name="TaskRadio2" class="custom-control-input">
+                                       <label class="custom-control-label" for="TaskRadio2"></label>
+                                    </div>
+                                    <div class="card-body">
+                                       <div>
+                                          <h4 class="title mb-2">get selling advice for all cars</h4>
+                                          <p class="mb-1">You have 4 cars in the inventory that have not yet been appraised for selling. Get pricing advice and sell these cars fast!</p>
+                                       </div>
+                                       <div class="action">
+                                          <a href="#">
+                                             View cars 
+                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="#0666EB" d="M6.12402 3.625L10.4995 8.00049L6.12402 12.376" stroke="#181A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="card">
+                                    <div class="custom-control custom-radio">
+                                       <input type="checkbox" id="TaskRadio3" name="TaskRadio3" class="custom-control-input">
+                                       <label class="custom-control-label" for="TaskRadio3"></label>
+                                    </div>
+                                    <div class="card-body">
+                                       <div>
+                                          <h4 class="title mb-2">follow up on open deals</h4>
+                                          <p class="mb-1">You have some great deals with passed due dates and others upcoming soon. Follow up today or risk losing them.</p>
+                                       </div>
+                                       <div class="action">
+                                          <a href="#">
+                                             See all open deals 
+                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="#0666EB" d="M6.12402 3.625L10.4995 8.00049L6.12402 12.376" stroke="#181A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                             </svg>
+                                          </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="dropdown dropstart">
+                        <a href="#" class="icon dropdown-toggle no-arrow" data-bs-toggle="dropdown">
+                           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="12" cy="7" r="3.25" stroke="#181A1C" stroke-width="1.5" />
+                              <path
+                                 d="M11.9992 13C5.99846 13 4.83258 17 4.99924 19C8 20.5 16 20.5 18.9992 19C19.1659 17 18 13 11.9992 13Z"
+                                 stroke="#181A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                           </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" href="#"><img class="me-2" src="images/settings.svg"> Settings</a></li>
+                           <li><a class="dropdown-item" href="#"><img class="me-2" src="images/FAQ.svg"> Help center</a></li>
+                           <li>
+                              <hr class="dropdown-divider">
+                           </li>
+                           <li><a class="dropdown-item" href="#"><img class="me-2" src="images/LogOut.svg"> Log out</a></li>
+                        </ul>
+                        </a>		  
+                     </div>
+                  </div>
+               </div>
+         </header>
+         <div class="page-main d-flex flex-wrap">
+         <div class="dashboard-container container">
+         <div class="row">
+         <aside class="app-sidebar dashboard-sidebar pt-5 pb-4">
+         <a class="btn btn-primary side-toggle d-flex d-md-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+         </svg> Side Navigation
+         </a>
+         <ul class="side-menu d-none d-md-block">
+         <li>
+         <a class="side-menu__item" href="index.html">Home</a>
+         </li>
+         <li>
+         <a class="side-menu__item active" href="inventory3.html">Inventory</a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="buying2.html">Buying</a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="#">Trade-in</a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="#">B2B Auction</a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="#">Reports</a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="#">Settings</a>
+         </li>
+         </ul>
+         <ul class="side-menu side-menu-foo d-none d-md-block">
+         <li>
+         <a class="side-menu__item" href="#" data-bs-toggle="modal" data-bs-target="#vinmodal">
+         <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5498 0.800781C1.5498 0.386568 1.21402 0.0507812 0.799805 0.0507812C0.385591 0.0507812 0.0498047 0.386568 0.0498047 0.800781V8.00078C0.0498047 8.41499 0.385591 8.75078 0.799805 8.75078C1.21402 8.75078 1.5498 8.41499 1.5498 8.00078V0.800781ZM5.01647 0.800781C5.01647 0.386568 4.68069 0.0507812 4.26647 0.0507812C3.85226 0.0507812 3.51647 0.386568 3.51647 0.800781V4.6658C3.92507 4.04532 4.43254 3.49573 5.01647 3.03945V0.800781ZM8.37081 11.5958C7.84629 11.4601 7.37236 11.1986 6.98314 10.8455V10.4674C6.98314 10.0532 7.31892 9.71745 7.73314 9.71745C8.14735 9.71745 8.48314 10.0532 8.48314 10.4674V11.2008C8.48314 11.3457 8.44202 11.4811 8.37081 11.5958ZM11.9498 10.2256C11.5941 10.7605 11.0865 11.1857 10.4886 11.4396C10.4635 11.3646 10.4498 11.2843 10.4498 11.2008V5.34575C11.0646 5.59755 11.5865 6.02952 11.9498 6.57599V10.2256ZM11.9498 2.17979V0.800781C11.9498 0.386568 11.614 0.0507812 11.1998 0.0507812C10.7856 0.0507812 10.4498 0.386568 10.4498 0.800781V1.71542C10.9733 1.8127 11.4758 1.96996 11.9498 2.17979ZM8.48314 1.6381V0.800781C8.48314 0.386568 8.14735 0.0507812 7.73314 0.0507812C7.31892 0.0507812 6.98314 0.386568 6.98314 0.800781V1.97026C7.46124 1.80549 7.96348 1.69253 8.48314 1.6381ZM8.48314 5.17882C7.91392 5.30487 7.39996 5.57791 6.98314 5.95608V8.00078C6.98314 8.41499 7.31892 8.75078 7.73314 8.75078C8.14735 8.75078 8.48314 8.41499 8.48314 8.00078V5.17882ZM1.5498 10.4008C1.5498 9.98657 1.21402 9.65078 0.799805 9.65078C0.385591 9.65078 0.0498047 9.98657 0.0498047 10.4008V11.2008C0.0498047 11.615 0.385591 11.9508 0.799805 11.9508C1.21402 11.9508 1.5498 11.615 1.5498 11.2008V10.4008Z" fill="#929497"/>
+         <circle cx="9.2002" cy="8.40039" r="5.25" stroke="#929497" stroke-width="1.5"/>
+         <path d="M12.7998 12.8008L15.1998 15.2008" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+         </svg>                  
+         VIN Decorder
+         </a>
+         </li>
+         <li>
+         <a class="side-menu__item" href="#" data-bs-toggle="modal" data-bs-target="#importmodal">
+         <svg class="me-2" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M2.9375 7.5C2.9375 6.20206 3.32238 4.93327 4.04348 3.85407C4.76458 2.77487 5.7895 1.93374 6.98864 1.43704C8.18778 0.94034 9.50728 0.810381 10.7803 1.0636C12.0533 1.31681 13.2226 1.94183 14.1404 2.85961C15.0582 3.77739 15.6832 4.94672 15.9364 6.21972C16.1896 7.49272 16.0597 8.81222 15.563 10.0114C15.0663 11.2105 14.2251 12.2354 13.1459 12.9565C12.0667 13.6776 10.7979 14.0625 9.5 14.0625" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+         <path d="M9.5 5.15039V7.96289L10.4375 8.90039" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+         <path d="M1.0625 7.13086L2.9375 9.00586L4.8125 7.13086" stroke="#929497" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+         </svg>                  
+         Import check
+         </a>
+         </li>
+         </ul>          
+         </aside>
+         <div class="page-content dashboard-pagecont pt-3 pt-sm-5 px-3 px-xl-5 align-items-start">
+         <div class="row m-0">
+         <div class="col p-0">
+         <div class="welcome_header mb-4">
+         <h3>Your Stock</h3>
+         </div>
+         </div>
+         </div>
+         <div class="row m-0 h-100">
+         <div class="bg-white white-card p-0 mb-5 ">
+         <div class="a-innerpagesection a-inventorysection innercontent">
+         <form>
+         <div class="a-filter-dropdowns py-4 px-3 stockfilter inventory_stock_filter align-items-center">
+         <div class="a-filter-dropdowns_left">
+         <div class="a-optionbox a-yearoptionbox">
+         <label for="year" type="select">Year</label>
+         <select id="year">
+         <option value=""></option>
+         <option value="0">2021</option>
+         <option value="1">2020</option>
+         <option value="2">2019</option>
+         <option value="3">2018</option>
+         <option value="4">2017</option>
+         <option value="5">2016</option>
+         <option value="6">2015</option>
+         <option value="7">2014</option>
+         <option value="8">2013</option>
+         <option value="9">2012</option>
+         <option value="10">2011</option>
+         </select>
+         </div>
+         <div class="a-optionbox">
+         <label for="make" type="select">Make</label>
+         <select id="make">
+         <option value=""></option>
+         <option value="0">2021</option>
+         <option value="1">2020</option>
+         <option value="2">2019</option>
+         <option value="3">2018</option>
+         <option value="4">2017</option>
+         <option value="5">2016</option>
+         <option value="6">2015</option>
+         <option value="7">2014</option>
+         <option value="8">2013</option>
+         <option value="9">2012</option>
+         <option value="10">2011</option>
+         </select>
+         </div>
+         <div class="a-optionbox">
+         <label for="model" type="select">Model</label>
+         <select id="model">
+         <option value=""></option>
+         <option value="0">2021</option>
+         <option value="1">2020</option>
+         <option value="2">2019</option>
+         <option value="3">2018</option>
+         <option value="4">2017</option>
+         <option value="5">2016</option>
+         <option value="6">2015</option>
+         <option value="7">2014</option>
+         <option value="8">2013</option>
+         <option value="9">2012</option>
+         <option value="10">2011</option>
+         </select>
+         </div>
+         <div class="a-optionbox">
+         <label for="trim" type="select">Trim</label>
+         <select id="trim">
+         <option value=""></option>
+         <option value="0">2021</option>
+         <option value="1">2020</option>
+         <option value="2">2019</option>
+         <option value="3">2018</option>
+         <option value="4">2017</option>
+         <option value="5">2016</option>
+         <option value="6">2015</option>
+         <option value="7">2014</option>
+         <option value="8">2013</option>
+         <option value="9">2012</option>
+         <option value="10">2011</option>
+         </select>
+         </div>
+         <div class="cfl-dropdown age-cfldropdown">
+         <div class="period-dropdown-togle custom-floding-dropdown form-floating">
+         <!-- <input type="text" class="form-control" id="ageinput"> -->
+         <!-- <label for="ageinput" type="select">Age</label> -->
+         <span class="agetext" id="ageresult" type="select">Age</span>
+         <a data-bs-toggle="tooltip" data-bs-placement="top" title="Clear Filter" href="javascript:void(0)"
+            class="clear-filter-icon"><i class="fa fa-times" aria-hidden="true"></i></a>
+         </div>
+         <div class="period-dropdown dropdown-menu p-3">
+         <h6 class="drop-title mb-2">Age</h6>
+         <div class="d-flex">
+         <div class="date-wrap age-wrap">
+         <!-- <select id="fromage" class="selectpicker">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            </select> -->
+         <div class="a-optionbox a-yearoptionbox">
+         <label for="fromage" type="select">From</label>
+         <select id="fromage" class="selectpicker">
+         <option value="0">0</option>
+         <option value="10">10</option>
+         <option value="20">20</option>
+         <option value="30">30</option>
+         <option value="40">40</option>
+         <option value="50">50</option>
+         <option value="60">60</option>
+         <option value="70">70</option>
+         <option value="80">80</option>
+         </select>
+         </div>
+         <span class="age-seprator date-seprator">-</span>
+         <div class="a-optionbox a-yearoptionbox">
+         <label for="toage" type="select">To</label>
+         <select id="toage" class="selectpicker">
+         <option value="0">0</option>
+         <option value="10">10</option>
+         <option value="20">20</option>
+         <option value="30">30</option>
+         <option value="40">40</option>
+         <option value="50">50</option>
+         <option value="60">60</option>
+         <option value="70">70</option>
+         <option value="80">80</option>
+         </select>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         <div class="a-filter-dropdowns_right searchbtn">
+         <a href="#" class="reporthdr_btn bluebtn">Search</a>
+         </div>
+         </div>
+         </form>
+         <div class="table-scroll">
+         <div class="table-responsive table-container freeze-table table-head-only p-0 buyingopp-sec mt-0 datatable_section" id="">
+         <table class="table stocktable" id="stocktable">
+         <thead class="thead-dark">
+         <tr>
+         <th scope="col" class="reorder datatable_widget1" style="min-width:160px;"><label class="">Make/Model
+         </label>
+         </th>
+         <th scope="col" class="reorder datatable_widget2"><label class="">Year</label></th>
+         <th scope="col" class="reorder datatable_widget2">Age</th>
+         <th scope="col" class="reorder datatable_widget2">Mileage</th>
+         <th scope="col" class="reorder datatable_widget1">Asking</th>
+         <th scope="col" class="reorder datatable_widget1">Market</th>
+         <th scope="col" class="reorder"><span>Asking vs<br/> Market</span></th>
+         <th scope="col" class="reorder">Actions</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr>
+         <td class="tabledatacenter"><span>WBSWD93549PY43903</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  520i</a></span><span>Stock ID: 24588</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">20</td>
+         <td class="tabledatacenter text-center">70,800 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 175,000</span><span> dRank: 42/44</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 155,000</span><span>  Market supply: 44</span></td>
+         <td class="tabledatacenter text-center">100%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"> <svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WBTYD93549PY54225</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  520i</a></span><span>Stock ID: 54225</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">19</td>
+         <td class="tabledatacenter text-center">55,300 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 166,000
+         </span><span>  dRank: 40/44</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 155,000</span><span>  Market supply: 44</span></td>
+         <td class="tabledatacenter text-center">90%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WBLWD93549PY15478</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  320i</a></span><span>Stock ID: 15478</span></td>
+         <td class="tabledatacenter text-center">2021</td>
+         <td class="tabledatacenter text-center">34</td>
+         <td class="tabledatacenter text-center">85,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 75,000
+         </span><span> dRank: 48/62</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 77,000</span><span>  Market supply: 62</span></td>
+         <td class="tabledatacenter text-center">80%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WBSWC43549PZ65896</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  730Li</a></span><span>Stock ID: 65896</span></td>
+         <td class="tabledatacenter text-center">2019</td>
+         <td class="tabledatacenter text-center">5</td>
+         <td class="tabledatacenter text-center">24,600 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 225,000
+         </span><span> dRank: 32/41</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 255,000</span><span>  Market supply: 41</span></td>
+         <td class="tabledatacenter text-center">70%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WBSU793549PY35658</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X5</a></span><span>Stock ID: 35658</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">19</td>
+         <td class="tabledatacenter text-center">105,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 275,000
+         </span><span> dRank: 48/55</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 230,000</span><span>  Market supply: 55</span></td>
+         <td class="tabledatacenter text-center">60%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WFRED93549PY22256</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X5</a></span><span>Stock ID: 22256</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">19</td>
+         <td class="tabledatacenter text-center">95,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 290,000
+         </span><span> dRank: 40/55</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 230,000</span><span>  Market supply: 55</span></td>
+         <td class="tabledatacenter text-center">50%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WUYTD93549PY89562</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X1</a></span><span>Stock ID: 89562</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">45</td>
+         <td class="tabledatacenter text-center">10,500 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 75,000
+         </span><span> dRank: 10/25</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 65,500</span><span>  Market supply: 25</span></td>
+         <td class="tabledatacenter text-center">40%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WASDD93549PY45874</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  440i</a></span><span>Stock ID: 45874</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">59</td>
+         <td class="tabledatacenter">77,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 110,000
+         </span><span> dRank: 2/5</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 125,000</span><span>  Market supply: 5</span></td>
+         <td class="tabledatacenter text-center">30%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WBLKJ93549PY12596</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  520i</a></span><span>Stock ID: 12596</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">10</td>
+         <td class="tabledatacenter text-center">85,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 175,000
+         </span><span> dRank: 36/44</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 155,000</span><span>  Market supply: 44</span></td>
+         <td class="tabledatacenter text-center">20%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WYSTD93549PY25458</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X6</a></span><span>Stock ID: 54785</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">10</td>
+         <td class="tabledatacenter text-center">94,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 325,000
+         </span><span> dRank: 17/29</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 285,000</span><span>  Market supply: 29</span></td>
+         <td class="tabledatacenter text-center">10%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <!--testing-->
+         <tr>
+         <td class="tabledatacenter"><span>WYSTD93549PY25458</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X6</a></span><span>Stock ID: 54785</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">10</td>
+         <td class="tabledatacenter text-center">94,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 325,000
+         </span><span> dRank: 17/29</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 285,000</span><span>  Market supply: 29</span></td>
+         <td class="tabledatacenter text-center">10%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         <tr>
+         <td class="tabledatacenter"><span>WYSTD93549PY25458</span><span class="bluetext carname"><a href="inventorydetails.html">BMW  X6</a></span><span>Stock ID: 54785</span></td>
+         <td class="tabledatacenter text-center">2020</td>
+         <td class="tabledatacenter text-center">10</td>
+         <td class="tabledatacenter text-center">94,000 KM</td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 325,000
+         </span><span> dRank: 17/29</span></td>
+         <td class="tabledatacenter"><span class="bluetext weight600">AED 285,000</span><span>  Market supply: 29</span></td>
+         <td class="tabledatacenter text-center">10%</td>
+         <td align="center" class="actiondata tabledatacenter"><span>
+         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M6.08372 5.05409C6.11114 5.08034 6.14816 5.09507 6.18675 5.09507C6.22534 5.09507 6.26237 5.08034 6.28979 5.05409L8.40884 3.00501C9.38996 2.0563 11.0458 1.95579 12.129 3.00501C13.2141 4.05424 13.1102 5.65364 12.129 6.60236L10.01 8.65143C9.95346 8.70609 9.95346 8.79603 10.01 8.85069L10.7358 9.55253C10.7632 9.57878 10.8002 9.59351 10.8388 9.59351C10.8774 9.59351 10.9144 9.57878 10.9419 9.55253L13.0609 7.50345C14.6037 6.01161 14.6037 3.59752 13.0609 2.10744C11.5181 0.617367 9.02158 0.615603 7.48062 2.10744L5.36156 4.15652C5.30503 4.21118 5.30503 4.30112 5.36156 4.35578L6.08372 5.05409ZM1.36781 13.4126C2.9106 14.9045 5.40715 14.9045 6.94812 13.4126L9.069 11.3635C9.09615 11.337 9.11138 11.3012 9.11138 11.2639C9.11138 11.2266 9.09615 11.1908 9.069 11.1643L8.34502 10.4642C8.28849 10.4095 8.19548 10.4095 8.13895 10.4642L6.01989 12.5133C5.03878 13.462 3.38292 13.5625 2.29969 12.5133C1.21463 11.4641 1.31857 9.86465 2.29969 8.91594L4.41874 6.86687C4.44589 6.84035 4.46112 6.80455 4.46112 6.76723C4.46112 6.72992 4.44589 6.69411 4.41874 6.6676L3.69294 5.96577C3.63641 5.9111 3.5434 5.9111 3.48687 5.96577L1.36781 8.01484C-0.173157 9.50668 -0.173157 11.9208 1.36781 13.4126ZM5.42539 10.2226C5.45281 10.2489 5.48983 10.2636 5.52842 10.2636C5.56701 10.2636 5.60404 10.2489 5.63146 10.2226L9.76198 6.23028C9.78913 6.20376 9.80436 6.16796 9.80436 6.13064C9.80436 6.09333 9.78913 6.05753 9.76198 6.03101L9.03982 5.33271C8.98329 5.27804 8.89028 5.27804 8.83375 5.33271L4.70505 9.32505C4.64852 9.37971 4.64852 9.46965 4.70505 9.52431L5.42539 10.2226Z" fill="black" fill-opacity="0.3"/>
+         </svg>
+         <a href="inventorydetails.html"><svg width="19" height="13" viewBox="0 0 19 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M9.45631 12.2826C14.975 12.2826 18.792 7.96546 18.792 6.61966C18.792 5.26726 14.9681 0.956787 9.45631 0.956787C3.97893 0.956787 0.11377 5.26726 0.11377 6.61966C0.11377 7.96546 4.00651 12.2826 9.45631 12.2826ZM9.45631 10.3306C7.30672 10.3306 5.61184 8.64502 5.59803 6.61966C5.59116 4.54106 7.30672 2.90883 9.45631 2.90883C11.5922 2.90883 13.3077 4.54106 13.3077 6.61966C13.3077 8.64502 11.5922 10.3306 9.45631 10.3306ZM9.45631 7.95879C10.2211 7.95879 10.8549 7.35254 10.8549 6.61966C10.8549 5.88018 10.2211 5.2739 9.45631 5.2739C8.68467 5.2739 8.05081 5.88018 8.05081 6.61966C8.05081 7.35254 8.68467 7.95879 9.45631 7.95879Z" fill="black" fill-opacity="0.3"/>
+         </svg></a>
+         </span></td>
+         </tr>
+         </tbody>
+         </table>  
+         </div>    
+         </div>                  
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         </div>
+         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+               <h5 class="offcanvas-title" id="offcanvasExampleLabel">Navigation</h5>
+               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+               <ul class="side-menu">
+                  <li>
+                     <a class="side-menu__item" href="#">Home</a>
+                  </li>
+                  <li>
+                     <a class="side-menu__item" href="#">Inventory</a>
+                  </li>
+                  <li>
+                     <a class="side-menu__item" href="#">Trade-in</a>
+                  </li>
+                  <li>
+                     <a class="side-menu__item" href="#">Buying</a>
+                  </li>
+                  <li>
+                     <a class="side-menu__item" href="#">Settings</a>
+                  </li>
+               </ul>
+               <ul class="side-menu side-menu-foo">
+                  <li>
+                     <a class="side-menu__item" href="#">
+                        <svg class="me-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5498 0.800781C1.5498 0.386568 1.21402 0.0507812 0.799805 0.0507812C0.385591 0.0507812 0.0498047 0.386568 0.0498047 0.800781V8.00078C0.0498047 8.41499 0.385591 8.75078 0.799805 8.75078C1.21402 8.75078 1.5498 8.41499 1.5498 8.00078V0.800781ZM5.01647 0.800781C5.01647 0.386568 4.68069 0.0507812 4.26647 0.0507812C3.85226 0.0507812 3.51647 0.386568 3.51647 0.800781V4.6658C3.92507 4.04532 4.43254 3.49573 5.01647 3.03945V0.800781ZM8.37081 11.5958C7.84629 11.4601 7.37236 11.1986 6.98314 10.8455V10.4674C6.98314 10.0532 7.31892 9.71745 7.73314 9.71745C8.14735 9.71745 8.48314 10.0532 8.48314 10.4674V11.2008C8.48314 11.3457 8.44202 11.4811 8.37081 11.5958ZM11.9498 10.2256C11.5941 10.7605 11.0865 11.1857 10.4886 11.4396C10.4635 11.3646 10.4498 11.2843 10.4498 11.2008V5.34575C11.0646 5.59755 11.5865 6.02952 11.9498 6.57599V10.2256ZM11.9498 2.17979V0.800781C11.9498 0.386568 11.614 0.0507812 11.1998 0.0507812C10.7856 0.0507812 10.4498 0.386568 10.4498 0.800781V1.71542C10.9733 1.8127 11.4758 1.96996 11.9498 2.17979ZM8.48314 1.6381V0.800781C8.48314 0.386568 8.14735 0.0507812 7.73314 0.0507812C7.31892 0.0507812 6.98314 0.386568 6.98314 0.800781V1.97026C7.46124 1.80549 7.96348 1.69253 8.48314 1.6381ZM8.48314 5.17882C7.91392 5.30487 7.39996 5.57791 6.98314 5.95608V8.00078C6.98314 8.41499 7.31892 8.75078 7.73314 8.75078C8.14735 8.75078 8.48314 8.41499 8.48314 8.00078V5.17882ZM1.5498 10.4008C1.5498 9.98657 1.21402 9.65078 0.799805 9.65078C0.385591 9.65078 0.0498047 9.98657 0.0498047 10.4008V11.2008C0.0498047 11.615 0.385591 11.9508 0.799805 11.9508C1.21402 11.9508 1.5498 11.615 1.5498 11.2008V10.4008Z" fill="#929497"/>
+                           <circle cx="9.2002" cy="8.40039" r="5.25" stroke="#929497" stroke-width="1.5"/>
+                           <path d="M12.7998 12.8008L15.1998 15.2008" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        VIN Decorder
+                     </a>
+                  </li>
+                  <li>
+                     <a class="side-menu__item" href="#">
+                        <svg class="me-2" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M2.9375 7.5C2.9375 6.20206 3.32238 4.93327 4.04348 3.85407C4.76458 2.77487 5.7895 1.93374 6.98864 1.43704C8.18778 0.94034 9.50728 0.810381 10.7803 1.0636C12.0533 1.31681 13.2226 1.94183 14.1404 2.85961C15.0582 3.77739 15.6832 4.94672 15.9364 6.21972C16.1896 7.49272 16.0597 8.81222 15.563 10.0114C15.0663 11.2105 14.2251 12.2354 13.1459 12.9565C12.0667 13.6776 10.7979 14.0625 9.5 14.0625" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+                           <path d="M9.5 5.15039V7.96289L10.4375 8.90039" stroke="#929497" stroke-width="1.5" stroke-linecap="round"/>
+                           <path d="M1.0625 7.13086L2.9375 9.00586L4.8125 7.13086" stroke="#929497" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Import check
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      </div>
+      <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+   </body>
+   <script src="js/jquery-3.6.0.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+   <script src="js/freeze-table.js"></script>
+   <script src="js/datejquery.js"></script>
+   <script src="js/page-fixed-header.js"></script>
+   <script src="js/dataTables.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="js/floating-dropdown.js" defer="defer"></script>
+   
+   <script type="text/javascript">
+            jQuery(document).ready(function() {
+          // SelectPicker initialization
+          jQuery('.selectpicker').selectpicker();
+      
+          // Dropdown change event
+          jQuery("#fromage , #toage").change(function() {
+              var fromageselectedValue = jQuery("#fromage").val();
+              var toageselectedValue = jQuery("#toage").val();
+              jQuery("#ageresult").text(fromageselectedValue + " - " + toageselectedValue);
+          });
+      });
+      jQuery(document).ready(function() {
+         jQuery(".table-head-only").freezeTable({
+            'freezeColumn': false
+         });
+      });
+      window.addEventListener("load", (event) => {
+         jQuery(document).ready(function() {
+            jQuery('.dataTables_info,.dataTables_paginate').wrapAll('<div class="datatablefooterwrap"></div>');
+      });
+      });
+      window.addEventListener("load", (event) => {
+         jQuery(document).ready(function() {
+            jQuery('.dataTables_info,.dataTables_paginate').wrapAll('<div class="datatablefooterwrap"></div>');
+      });
+      });
+      window.addEventListener("load", (event) => {
+         jQuery(document).ready(function() {
+            jQuery('.stocktable').wrapAll('<div class="stocktablewrap"></div>');
+      });
+      });
+      
+      jQuery(".custom-floding-dropdown").on("click", function () {
+            var current_dropdown = jQuery(this).next(".dropdown-menu");
+            jQuery(".custom-floding-dropdown + .dropdown-menu").not(current_dropdown).hide();
+            current_dropdown.toggle();
+            return false;
+         });
+      
+         
+         const $menu = jQuery('.cfl-dropdown');
+         jQuery(document).mouseup(e => {
+            if (!$menu.is(e.target) // if the target of the click isn't the container...
+               && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+            {
+               $menu.removeClass('active');
+               jQuery($menu).children(".dropdown-menu").hide();
+            }
+         });
+      
+      
+         jQuery(".bootstrap-select .dropdown-menu").on('click', 'li', function () {
+            var period = jQuery('a.selected').text();
+            jQuery(this).parents(".cfl-dropdown").find('.custom-floding-dropdown .form-control').val(period);
+            if (period != '') {
+               jQuery(this).parents(".cfl-dropdown").addClass('valueselected');
+            } else {
+               jQuery(".custom-floding-dropdown .form-control").parents(".cfl-dropdown").removeClass('valueselected');
+            }
+         });
+      
+         jQuery(".cfl-dropdown .clear-filter-icon").click(function () {
+            jQuery('.cfl-dropdown .form-control').val("");
+            jQuery(this).parents(".cfl-dropdown").removeClass('valueselected');
+      
+         });
+   </script>
+</html>
